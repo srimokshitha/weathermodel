@@ -1,0 +1,10 @@
+def quadratic_weather_model(hour):
+    return -0.008 * (hour - 12)**2 + 28.8
+
+print("\n=== ITERATIVE MODE ===")
+for iteration in range(1, 4):
+    print(f"Iteration {iteration}:")
+    for hour in range(0, 25, 12):  # every 12 hours: 0, 12, 24
+        temp = quadratic_weather_model(hour)
+        print(f"Time: {hour} hrs -> Temp: {temp:.2f}°C")
+    print("---")
